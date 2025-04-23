@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+input, select, button {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem; 
+  padding: 0.5rem 0.75rem; 
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
