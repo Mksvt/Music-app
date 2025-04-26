@@ -1,54 +1,32 @@
-# React + TypeScript + Vite
+# 🎵 Music Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Music Manager** is a modern web application for managing music tracks.  
+It allows you to browse, create, edit, delete, and mass delete tracks, upload and update audio files, and visualize audio with a custom waveform.
 
-Currently, two official plugins are available:
+## 🔥 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📄 **Browse tracks** — view all available tracks with pagination.
+- ➕ **Create track** — add a new track with an uploaded audio file.
+- 🛠 **Edit track** — update track details and change the audio file.
+- 🗑 **Delete track** — remove individual tracks easily.
+- 🗑🗑 **Mass delete tracks** — select multiple tracks and delete them at once.
+- ⬆ **Upload audio files** — supports MP3 and other audio formats.
+- 🎧 **Custom audio waveform** — built-in audio visualization using Wavesurfer.js.
+- 🔄 **Pagination** — split a large number of tracks into pages.
+- 🧹 **Manage audio files** — update or remove uploaded audio directly.
 
-## Expanding the ESLint configuration
+## 🚀 Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Backend**: Node.js, Express
+- **Frontend**: React, TailwindCSS
+- **Database**: JSON files (or can be adapted for other databases)
+- **Libraries**: 
+  - `Wavesurfer.js` for audio visualization
+  - `Axios` for API handling
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Project Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+```bash
+git clone https://github.com/Mksvt/Music-app.git
+npm install
+npm run dev
